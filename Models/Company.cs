@@ -1,5 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 
 namespace CursTest.Models
 {
@@ -10,7 +12,8 @@ namespace CursTest.Models
     {
         [BsonId] // Service Id to define primary key for Mongo Db
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
-        public int Id { get; set; }
+        [Required]// to make non-nulable string property
+        public string Id { get; set; }
         public string Name { get; set; }
         public int BIN { get; set; }
         public DateTime EstablishmentDate { get; set; }

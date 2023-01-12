@@ -16,7 +16,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DATABASE_NAME": "CompanyregisterDb",
-        "COMPANY_COLLECTION_NAME": "Companies",
+        "COMPANIES_COLLECTION_NAME": "Companies"
       }
     },
     "CursTest": {
@@ -28,7 +28,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DATABASE_NAME": "CompanyregisterDb",
-        "COMPANY_COLLECTION_NAME": "Companies"
+        "COMPANIES_COLLECTION_NAME": "Companies"
       }
     }
   }

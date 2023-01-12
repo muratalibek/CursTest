@@ -1,3 +1,4 @@
+using CursTest.Services.CompanyService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,7 +27,7 @@ namespace CursTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddTransient<ICompanyService, CompanyService>();//Service added for Dependency Injection
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 
 namespace CursTest.Models
 {
@@ -7,6 +8,8 @@ namespace CursTest.Models
     /// </summary>
     public class Company
     {
+        [BsonId] // Service Id to define primary key for Mongo Db
+        [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public int Id { get; set; }
         public string Name { get; set; }
         public int BIN { get; set; }

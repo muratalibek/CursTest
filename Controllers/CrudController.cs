@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CursTest.Services.CompanyService;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,13 @@ namespace CursTest.Controllers
     [Route("[controller]")]
     public class CrudController : ControllerBase
     {
-        public CrudController()
+        private readonly ICompanyService _companyService;
+        public CrudController(ICompanyService companyService)
         {
+            _companyService = companyService;
            
-        } 
+        }
+        [HttpGet]
+        public IActionResult GetCompanies() { return Ok(_companyService.GetCompanies()); }
     }
 }

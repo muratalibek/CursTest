@@ -14,7 +14,7 @@ namespace CursTest.Models
         public string Adress { get; set; }   
         public string PhoneNumber { get; set; }
         //public ImageSource Image { get; set; }
-        public int KRP { get; set; }
+        public int KRP { get; set; }// multivalued fields
         public string CompanyActivity { get; set; }
         public string Description { get; set; }
         public int Staff { get; set; }

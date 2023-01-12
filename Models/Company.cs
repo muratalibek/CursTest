@@ -13,7 +13,7 @@ namespace CursTest.Models
         public DateTime EstablishmentDate { get; set; }
         public string Adress { get; set; }   
         public string PhoneNumber { get; set; }
-        public ImageSource Image { get; set; }
+        //public ImageSource Image { get; set; }
         public int KRP { get; set; }
         public string CompanyActivity { get; set; }
         public string Description { get; set; }

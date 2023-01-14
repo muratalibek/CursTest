@@ -2,6 +2,7 @@
 using CursTest.Services.CompanyService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MongoDB.Bson;
 using MongoDB.Bson.IO;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,7 @@ namespace CursTest.Controllers
         [HttpPost]
         public IActionResult AddCompany(Company company)
         {
+            company.Id = ObjectId.GenerateNewId().ToString();
             _companyService.AddCompany(company);
             return CreatedAtRoute("GetCompany", new {id = company.Id}, company);    
         }

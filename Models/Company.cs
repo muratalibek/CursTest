@@ -23,7 +23,7 @@ namespace CursTest.Models
         public string PhoneNumber { get; set; }//телефон
         //public ImageSource Image { get; set; }
         public int KRP { get; set; } //КРП
-        public List<Object> CompanyActivity { get; set; }//деятельность (многозначное поле)
+        public List<string> CompanyActivity { get; set; }//деятельность (многозначное поле)
         public string Description { get; set; }//описание (строка)
         public int Staff { get; set; }//количество сотрудников (целые числа) 
     }

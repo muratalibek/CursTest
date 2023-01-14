@@ -1,5 +1,8 @@
 ﻿namespace CursTest.Data
 {
+    /// <summary>
+    /// Класс с свойствами для общения с БД
+    /// </summary>
     public class DataContext
     {
         public string Database_Name { get; set; }

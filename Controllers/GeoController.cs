@@ -7,15 +7,24 @@ using System.Security.Policy;
 
 namespace CursTest.Controllers
 {
+    /// <summary>
+    /// Контроллер для получения геоданных. Вводенные геолокационные данные выдают адрес 
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class GeoController : ControllerBase
     {
+        /// <summary>
+        /// Поле 
+        /// </summary>
         private readonly IConfiguration _configuration;
         public GeoController(IConfiguration configuration)
         {
             _configuration = configuration;
         }
+        /// <summary>
+        /// Get Метод через {geocode}, URL и API ключ вводит координаты в сервис IConfiguration и также через response возращает адрес 
+        /// </summary>
         [HttpGet("{geocode}", Name = "GetGeocode")]
         public IActionResult GetCompany(string geocode)
         {

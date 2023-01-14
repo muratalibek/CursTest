@@ -4,7 +4,9 @@ using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 namespace CursTest.Data
-{
+{   /// <summary>
+    /// Класс для соединения с БД и его коллекциями. Так как СУБД не реляционная соединения настраивал с каждой коллекцией.
+    /// </summary>
     public class DbClient : IDbClient
     {
         private readonly IMongoCollection<Company> _companies;

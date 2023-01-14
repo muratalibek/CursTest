@@ -5,6 +5,9 @@ using Microsoft.Extensions.Configuration;
 
 namespace CursTest.Controllers
 {
+    /// <summary>
+    /// КРП контроллер для получения характеристик организаций по идентификатору c файла JsonKRP. Список был внедрен в базу данных CompanyregisterDb.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class KRPController : ControllerBase
@@ -14,13 +17,17 @@ namespace CursTest.Controllers
         {
             _krpService = krpService;
         }
-
+        /// <summary>
+        /// Get метод для получения общего списка с характеристиками организаций
+        /// </summary>
         [HttpGet]
-        public IActionResult GetKRPs()// Controller action
+        public IActionResult GetKRPs()
         {
-            return Ok(_krpService.GetKRPs());// Service method
+            return Ok(_krpService.GetKRPs());
         }
-
+        /// <summary>
+        /// Get метод для получения определенной характеристики организации через индентификатор
+        /// </summary>
         [HttpGet("{id}", Name = "Krp")]
         public IActionResult GetKRP(string id)
         {

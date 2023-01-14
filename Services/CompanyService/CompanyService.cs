@@ -6,6 +6,9 @@ using System.Collections.Generic;
 
 namespace CursTest.Services.CompanyService
 {
+    /// <summary>
+    /// Сервис для получения/добавления/изменения/удаления организаций в базе данных CompanyregisterDb
+    /// </summary>
     public class CompanyService : ICompanyService
     {
         private readonly IMongoCollection<Company> _companies;
@@ -13,11 +16,9 @@ namespace CursTest.Services.CompanyService
         {
            _companies = dbClient.GetCompaniesCollection();
         }
-
-        public List<Company> GetCompanies()//This method going to return companies 
+        public List<Company> GetCompanies()
         {
             return _companies.Find(x => true).ToList();
-            //return _companies.Find(new Company()).ToList();
         }
         public Company GetCompany(string id)
         {

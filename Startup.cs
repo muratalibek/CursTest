@@ -29,11 +29,11 @@ namespace CursTest
         public void ConfigureServices(IServiceCollection services)
         {
             
-            services.AddSingleton<IDbClient, DbClient>();// Dependancy Injection
+            services.AddSingleton<IDbClient, DbClient>();
             services.Configure<Data.DataContext>(Configuration);
 
             services.AddTransient<IKRPService, KRPService>();
-            services.AddTransient<ICompanyService, CompanyService>();//Service added for Dependency Injection
+            services.AddTransient<ICompanyService, CompanyService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

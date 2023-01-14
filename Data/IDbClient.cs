@@ -7,5 +7,7 @@ namespace CursTest.Data
     public interface IDbClient
     {
         IMongoCollection<Company> GetCompaniesCollection();
+        IMongoCollection<KRP> GetKRPCollection();
+
     }
 }

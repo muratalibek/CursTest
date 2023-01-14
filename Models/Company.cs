@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
@@ -24,7 +25,10 @@ namespace CursTest.Models
         public string CompanyActivity { get; set; }
         public string Description { get; set; }
         public int Staff { get; set; }
-
+        public Company()
+        {
+            Id = ObjectId.GenerateNewId().ToString();
+        }
 
     }
 }

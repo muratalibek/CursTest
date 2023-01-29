@@ -17,7 +17,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DATABASE_NAME": "CompanyregisterDb",
         "COMPANIES_COLLECTION_NAME": "Companies",
-        "JSONFILENAME_COLLECTION_NAME": "JsonKRP"
+        "JSONFILENAME_COLLECTION_NAME": "JsonKRP",
+        "IMAGE_COLLECTION_NAME": "ImageData"
       }
     },
     "CursTest": {
@@ -30,7 +31,8 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "DATABASE_NAME": "CompanyregisterDb",
         "COMPANIES_COLLECTION_NAME": "Companies",
-        "JSONFILENAME_COLLECTION_NAME": "JsonKRP"
+        "JSONFILENAME_COLLECTION_NAME": "JsonKRP",
+        "IMAGE_COLLECTION_NAME": "ImageData"
       }
     }
   }

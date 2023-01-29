@@ -34,6 +34,7 @@ namespace CursTest
 
             services.AddTransient<IKRPService, KRPService>();
             services.AddTransient<ICompanyService, CompanyService>();
+            services.AddScoped<IImageDataService, ImageDataSercive>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

@@ -11,6 +11,7 @@ namespace CursTest.Data
     {
         private readonly IMongoCollection<Company> _companies;
         private readonly IMongoCollection<KRP> _krp;
+        private readonly IMongoCollection<Image> _image;
         
         public DbClient(IOptions<DataContext> dataContext)
         {
@@ -19,8 +20,10 @@ namespace CursTest.Data
             var database = client.GetDatabase(dataContext.Value.Database_Name);
             _companies = database.GetCollection<Company>(dataContext.Value.Companies_Collection_Name);
             _krp = database.GetCollection<KRP>(dataContext.Value.Jsonfilename_Collection_Name);
+            _image = database.GetCollection<Image>(dataContext.Value.Image_Collection_Name);
         }
         public IMongoCollection<Company> GetCompaniesCollection() => _companies;
         public IMongoCollection<KRP> GetKRPCollection() => _krp;
+        public IMongoCollection<Image> GetImageCollection() => _image;
     }
 }
